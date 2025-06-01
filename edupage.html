@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edu Center - ZED</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f9f4;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+<!-- Navbar -->
+<nav class="bg-green-700 text-white p-4 flex justify-between items-center border-b border-green-800 shadow-md relative">
+  <div class="flex items-center space-x-8">
+    <span class="font-bold italic text-white text-xl">ZED</span>
+    <a href="home.html" class="hover:underline">Home</a>
+    <a href="article.html" class="hover:underline">Articles</a>
+    <a href="edupage.html" class="hover:underline font-semibold underline">Edu Center</a>
+  </div>
+
+  <!-- Desktop Search Bar -->
+  <div class="relative hidden md:block">
+    <input type="text" placeholder="What do you want to know?" class="rounded-full pl-4 pr-10 py-1 text-black w-80" />
+    <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+      <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.414-1.414l4.387 4.386a1 1 0 01-1.414 1.415l-4.387-4.387zM14 8a6 6 0 11-12 0 6 6 0 0112 0z" clip-rule="evenodd" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Mobile Search Button -->
+  <div class="md:hidden">
+    <button id="mobile-search-toggle">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Search Input Hidden -->
+<div id="mobile-search-bar" class="p-4 bg-green-600 md:hidden hidden">
+  <div class="relative">
+    <input type="text" placeholder="What do you want to know?" class="w-full rounded-full pl-4 pr-10 py-2 text-black" />
+    <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+      <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.414-1.414l4.387 4.386a1 1 0 01-1.414 1.415l-4.387-4.387zM14 8a6 6 0 11-12 0 6 6 0 0112 0z" clip-rule="evenodd" />
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<main class="max-w-6xl mx-auto px-4 py-12 flex flex-col lg:flex-row gap-8">
+  <!-- Left Column: Video and Article -->
+  <div class="flex-1">
+    <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+      <video class="w-full" controls poster="https://via.placeholder.com/800x450?text=Video+Placeholder">
+        <source src="#" type="video/mp4">
+        Your browser does not support HTML video.
+      </video>
+    </div>
+
+    <!-- Mentor -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 space-y-4 sm:space-y-0 sm:space-x-4">
+      <div class="flex items-center">
+        <i class="fas fa-user-circle text-gray-500 text-4xl mt-1 pr-4"></i>
+        <div>
+          <p class="font-semibold">Mentor</p>
+          <p class="text-sm text-gray-500">Nameame@email.com</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
+        <button class="bg-green-200 text-green-700 px-4 py-2 rounded-xl flex items-center justify-center hover:bg-green-300 shadow-md">
+          <i class="far fa-share-square text-green-700 text-xl pr-2"></i>
+          Share
+        </button>
+        <button class="bg-green-700 text-white px-4 py-2 rounded-xl flex items-center justify-center hover:bg-green-600 shadow-md">
+          <i class="far fa-thumbs-up pr-2"></i>
+          Like
+        </button>
+      </div>
+    </div>
+
+
+    <!-- Article Content -->
+    <article class="mb-8">
+      <h1 class="text-2xl font-bold text-green-800 mb-4">Your Guide to Reducing Carbon Emissions<br>Practical Steps for a Sustainable Future</h1>
+      <p class="mb-4 text-gray-700">
+        The challenge of carbon emissions can feel overwhelming, but every individual and community has the power to make a significant difference. While completely eliminating emissions globally is a monumental task, we can all take concrete steps to reduce our carbon footprint and contribute to a healthier planet. This guide offers practical advice on how you can actively participate in mitigating carbon emissions in your daily life.
+      </p>
+      <h2 class="font-semibold mb-2">Understanding Your Carbon Footprint</h2>
+      <p class="text-gray-700">
+        Before diving into solutions, it’s helpful to understand what a carbon footprint is. Simply put, it’s the total amount of greenhouse gases (including carbon dioxide and methane) emitted directly and indirectly by an individual, organization, event, or product. Our lifestyle choices—how we travel, what we eat, how we power our homes—all contribute to this footprint.
+      </p>
+      <p class="mt-4 text-gray-700">
+        By integrating these practices into your daily life, you become an active participant in the global effort to mitigate carbon emissions. Every choice, no matter how small, contributes to a collective movement towards a more sustainable and resilient future.
+      </p>
+    </article>
+  </div>
+
+  <!-- Right Column: Chat and Related Videos -->
+  <aside class="w-full lg:w-80 space-y-6">
+    <!-- Chat -->
+    <div class="bg-green-100 p-4 rounded-xl shadow-md h-96 flex flex-col justify-between">
+      <div class="p-2">
+        <h2 class="font-semibold text-green-700 mb-4 text-xl">Chat Mentor</h2>
+          <div class="flex items-start space-x-2 mb-3">
+            <i class="fas fa-user-circle text-gray-500 text-2xl mt-1"></i>
+              <div>
+                <p class="font-semibold text-[14px] text-green-700">
+                  Name
+                </p>
+                <p class="text-[11px] text-gray-700">
+                  Hey Mentor! I saw your post about your upcoming video on carbon emissions. That's fantastic! I'm really keen to learn more.
+                </p>
+              </div>
+        </div>
+        <div class="flex items-start space-x-2">
+          <i class="fas fa-user-circle text-gray-500 text-2xl mt-1"></i>
+            <div>
+              <p class="font-semibold text-[14px] text-green-700">
+                Mentor
+              </p>
+              <p class="text-[11px] text-gray-700">
+                Hi! Glad you're interested! Yes, I'm just finalizing the script and shooting for it now.
+              </p>
+            </div>
+        </div>
+      </div>
+      <div class="mt-4 relative">
+        <input type="text" placeholder="Type something..." class="w-full border rounded-full px-4 py-2 text-sm">
+        <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-green-600 hover:text-green-800">
+          <img src="img/send.png" width="20px" alt="">
+        </button>
+      </div>
+    </div>
+
+    <!-- Related Videos -->
+    <div class=" p-4">
+      <h2 class="font-semibold text-xl text-green-700 mb-4">Related Videos</h2>
+      <div class="space-y-4">
+        <!-- Video item -->
+        <div class="flex space-x-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHrVpQZUgQlDVIwBM2wl7N17sR7PFUHSFNvBpBg4EEeADqeThW" class="w-20 h-20 object-cover rounded-md" />
+          <div class="">
+            <p class="font-medium text-md">Carbon Emissions</p>
+            <p class="text-sm text-gray-500">Mentor Name</p>
+            <p class="text-xs text-gray-400">100 Views • 20 Like</p>
+          </div>
+        </div>
+        <div class="flex space-x-4">
+          <img src="https://mobilefarm.id/wp-content/uploads/2023/02/annemarie-schaepman-5lmi2lh2oGU-unsplash-600x400.jpg" class="w-20 h-20 object-cover rounded-md" />
+          <div>
+            <p class="font-medium text-md">Carbon Emissions</p>
+            <p class="text-sm text-gray-500">Mentor Name</p>
+            <p class="text-xs text-gray-400">100 Views • 20 Like</p>
+          </div>
+        </div>
+        <div class="flex space-x-4">
+          <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,f_auto,q_auto:best,w_640/v1634025439/01jmy92rskkmbjyzf3ercwfkfr.jpg" class="w-20 h-20 object-cover rounded-md" />
+          <div>
+            <p class="font-medium text-md">Carbon Emissions</p>
+            <p class="text-sm text-gray-500">Mentor Name</p>
+            <p class="text-xs text-gray-400">100 Views • 20 Like</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<!-- Footer -->
+<footer class="bg-green-700 text-white py-8">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+      <div class="text-center md:text-left">
+        <h2 class="text-xl font-bold">Zero Emisi Digital</h2>
+        <p class="text-green-200 text-sm">Understanding our digital impact on the planet</p>
+      </div>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#" class="hover:text-green-300">
+          <svg class="w-6 h-6 text-white hover:text-white transition" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.43.36a9.05 9.05 0 01-2.88 1.1A4.48 4.48 0 0016.11 0c-2.49 0-4.5 2.07-4.5 4.63 0 .36.04.71.12 1.05A12.94 12.94 0 013 1.64a4.54 4.54 0 001.4 6.13A4.4 4.4 0 012 7v.06a4.49 4.49 0 003.6 4.4 4.52 4.52 0 01-2.04.08 4.51 4.51 0 004.2 3.18A9 9 0 012 19.54a12.94 12.94 0 007.29 2.13c8.76 0 13.54-7.5 13.54-14v-.64A9.8 9.8 0 0023 3z" />
+          </svg>          
+        </a>
+        <a href="#" class="hover:text-green-300">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.88a1.12 1.12 0 110 2.24 1.12 1.12 0 010-2.24z"/>
+          </svg>
+          
+        </a>
+        <a href="#" class="hover:text-green-300">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.337v21.326C0 23.4.6 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.796.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116c.725 0 1.325-.6 1.325-1.337V1.337C24 .6 23.4 0 22.675 0z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <hr class="border-white mb-4"/>
+    <p class="text-center text-sm text-green-200">&copy; 2025 Digital Carbon Footprint. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Script Toggle -->
+<script>
+  const toggleBtn = document.getElementById('mobile-search-toggle');
+  const mobileSearchBar = document.getElementById('mobile-search-bar');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileSearchBar.classList.toggle('hidden');
+  });
+</script>
+
+</body>
+</html>

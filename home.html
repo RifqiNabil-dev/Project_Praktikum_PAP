@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZED - ZeroEmisiDigital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f9f4;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+<!-- Navbar -->
+<nav class="bg-green-700 text-white p-4 flex justify-between items-center border-b border-green-800 shadow-md relative">
+  <div class="flex items-center space-x-8">
+    <span class="font-bold italic text-white text-xl">ZED</span>
+    <a href="home.html" class="hover:underline font-semibold underline">Home</a>
+    <a href="article.html" class="hover:underline">Articles</a>
+    <a href="edupage.html" class="hover:underline">Edu Center</a>
+  </div>
+
+  <!-- Desktop Search Bar -->
+  <div class="relative hidden md:block">
+    <input type="text" placeholder="What do you want to know?" class="rounded-full pl-4 pr-10 py-1 text-black w-80" />
+    <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+      <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.414-1.414l4.387 4.386a1 1 0 01-1.414 1.415l-4.387-4.387zM14 8a6 6 0 11-12 0 6 6 0 0112 0z" clip-rule="evenodd" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Mobile Search Button -->
+  <div class="md:hidden">
+    <button id="mobile-search-toggle">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Search Input Hidden -->
+<div id="mobile-search-bar" class="p-4 bg-green-600 md:hidden hidden">
+  <div class="relative">
+    <input type="text" placeholder="What do you want to know?" class="w-full rounded-full pl-4 pr-10 py-2 text-black" />
+    <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+      <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.414-1.414l4.387 4.386a1 1 0 01-1.414 1.415l-4.387-4.387zM14 8a6 6 0 11-12 0 6 6 0 0112 0z" clip-rule="evenodd" />
+      </svg>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Hero Section -->
+  <section class="bg-green-700 text-white py-16 px-8">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
+      <div class="md:w-2/3">
+        <h1 class="text-3xl md:text-4xl font-bold"><span class="italic">ZED</span> - ZeroEmisiDigital</h1>
+        <p class="mt-2">Understand how your online activity impacts the environment and what you can do about it.</p>
+        <button class="mt-6 bg-white text-green-700 font-semibold px-6 py-2 rounded hover:bg-green-100">Calculate Your Impact</button>
+      </div>
+      <div class="md:w-1/3 flex justify-center">
+        <img src="img/logo ZED.png" width="200px" alt="Logo ZED">
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Digital Carbon Footprint -->
+  <section class="py-16 px-8 bg-white">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-8">What is a Digital Carbon Footprint?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-green-100 p-6 rounded shadow">
+          <div class="mb-4 flex justify-center items-center"><img src="img/Data.png" alt=""></div>
+          <h3 class="font-semibold text-lg">Data Storage</h3>
+          <p class="text-sm mt-2">Every file you store in the cloud consumes energy to stay available.</p>
+        </div>
+        <div class="bg-green-100 p-6 rounded shadow">
+          <div class="mb-4 flex justify-center items-center"><img src="img/Live.png" alt=""></div>
+          <h3 class="font-semibold text-lg">Streaming</h3>
+          <p class="text-sm mt-2">Watching online videos uses bandwidth and server energy.</p>
+        </div>
+        <div class="bg-green-100 p-6 rounded shadow">
+          <div class="mb-4 flex justify-center items-center"><img src="img/browsing.png" width="70px" alt=""></div>
+          <h3 class="font-semibold text-lg">Web Browsing</h3>
+          <p class="text-sm mt-2">Each search and website visit consumes energy from data centers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Digital Impact -->
+  <section class="py-16 px-4 bg-[#f0f9f4]">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-2xl font-bold text-green-700 mb-12">The Digital Impact</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white p-6 rounded shadow-md text-center">
+        <p class="text-3xl font-bold text-green-700">300</p>
+        <p class="text-sm mt-2">Billion emails sent daily</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow-md text-center">
+        <p class="text-3xl font-bold text-green-700">80</p>
+        <p class="text-sm mt-2">Million tons of CO₂ from streaming</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow-md text-center">
+        <p class="text-3xl font-bold text-green-700">4</p>
+        <p class="text-sm mt-2">Grams of CO₂ per email</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow-md text-center">
+        <p class="text-3xl font-bold text-green-700">3.7</p>
+        <p class="text-sm mt-2">% of global carbon emissions</p>
+      </div>
+    </div>
+  </div>
+</section>  
+
+  <!-- Calculator -->
+  <section class="py-16 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-2xl font-bold text-center mb-12">Calculate Your Digital Carbon Footprint</h2>
+    <div class="flex flex-col md:flex-row gap-8 items-center justify-between">
+      <!-- Left: Inputs -->
+      <div class="bg-[#f0f9f4] p-6 rounded-lg flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-medium mb-1">Emails sent per day</label>
+          <input type="range" min="0" max="100" value="15" class="w-full" />
+          <div class="flex justify-between text-xs mt-1 text-gray-600">
+            <span>0</span><span>15</span><span>100</span>
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Hours of video streaming per week</label>
+          <input type="range" min="0" max="40" value="10" class="w-full" />
+          <div class="flex justify-between text-xs mt-1 text-gray-600">
+            <span>0</span><span>10</span><span>40</span>
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Hours of web browsing per day</label>
+          <input type="range" min="0" max="16" value="4" class="w-full" />
+          <div class="flex justify-between text-xs mt-1 text-gray-600">
+            <span>0</span><span>4</span><span>16</span>
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Cloud storage used (GB)</label>
+          <input type="range" min="0" max="1000" value="100" class="w-full" />
+          <div class="flex justify-between text-xs mt-1 text-gray-600">
+            <span>0</span><span>100</span><span>1000</span>
+          </div>
+        </div>
+        <div class="sm:col-span-2 text-center">
+          <button class="mt-4 bg-black text-white font-semibold px-6 py-2 rounded hover:bg-gray-800">Calculate</button>
+        </div>
+      </div>
+
+      <!-- Right: Result circle -->
+      <div class="text-center w-full md:w-1/3">
+        <h3 class="font-semibold mb-4">Your Digital Carbon Footprint</h3>
+        <div class="relative w-48 h-48 mx-auto">
+          <svg viewBox="0 0 36 36" class="w-full h-full">
+            <circle cx="18" cy="18" r="16" fill="none" stroke="#e5e5e5" stroke-width="4"/>
+            <circle cx="18" cy="18" r="16" fill="none" stroke="#000" stroke-width="4"
+                    stroke-dasharray="100" stroke-dashoffset="25" transform="rotate(-90 18 18)"/>
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center">
+            <p class="text-xl font-bold">280</p>
+            <p class="text-sm">Kg CO₂/year</p>
+          </div>
+        </div>
+        <p class="font-semibold mt-4">High</p>
+        <p class="text-sm text-gray-600">Equivalent to:<br/>2341 km of car travel</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Tips -->
+  <section class="py-16 px-8 bg-[#f0f9f4]">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-8">Reduce Your Digital Carbon Footprint</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded shadow text-left">
+          <h3 class="font-semibold text-lg mb-2"><img src="img/Letter.png"width="15%" alt="">Clean Your Inbox</h3>
+          <ul class="list-disc list-inside text-sm">
+            <li>Delete old emails</li>
+            <li>Unsubscribe from newsletters</li>
+            <li>Use spam filters</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded shadow text-left">
+          <h3 class="font-semibold text-lg mb-2"><img src="img/Live.png"width="15%" alt=""> Optimize Streaming</h3>
+          <ul class="list-disc list-inside text-sm">
+            <li>Watch in lower quality when possible</li>
+            <li>Download for offline viewing</li>
+            <li>Use Wi-Fi instead of mobile data</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded shadow text-left">
+          <h3 class="font-semibold text-lg mb-2"><img src="img/browsing.png"width="19%" alt=""> Browse Efficiently</h3>
+          <ul class="list-disc list-inside text-sm">
+            <li>Bookmark frequent websites</li>
+            <li>Close unused tabs</li>
+            <li>Use data saver mode</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Perbandingan Emisi Global -->
+<section class="py-16 px-4 bg-white">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-2xl font-bold text-black mb-2">Global Emissions Comparison</h2>
+    <p class="text-gray-700 mb-6">Compare your digital carbon footprint to the global average</p>
+
+    <div class="bg-green-100 p-6 rounded-lg text-left space-y-4">
+      <!-- Total Comparison -->
+      <div>
+        <div class="flex justify-between text-sm font-medium text-black">
+          <span>You</span>
+          <span>0 kg CO2 /Year</span>
+        </div>
+        <div class="w-full h-2 bg-white rounded-full mt-1"></div>
+      </div>
+
+      <div>
+        <div class="flex justify-between text-sm font-medium text-black">
+          <span>Global average</span>
+          <span>0 kg CO2 /Year</span>
+        </div>
+        <div class="w-full h-2 bg-white rounded-full mt-1"></div>
+      </div>
+
+      <!-- Per Kategori -->
+      <h3 class="font-bold text-black mt-4">Comparison by Category</h3>
+
+      <div>
+        <div class="flex justify-between text-sm font-medium text-black">
+          <span>Email</span>
+          <span>0 kg / 0 kg</span>
+        </div>
+        <div class="w-full h-2 bg-white rounded-full mt-1"></div>
+      </div>
+
+      <div>
+        <div class="flex justify-between text-sm font-medium text-black">
+          <span>Streaming Video</span>
+          <span>0 kg / 0 kg</span>
+        </div>
+        <div class="w-full h-2 bg-white rounded-full mt-1"></div>
+      </div>
+
+      <div>
+        <div class="flex justify-between text-sm font-medium text-black">
+          <span>Web Browsing</span>
+          <span>0 kg / 0kg</span>
+        </div>
+        <div class="w-full h-2 bg-white rounded-full mt-1"></div>
+      </div>
+
+      <div>
+        <div class="flex justify-between text-sm font-medium text-black">
+          <span>Cloud Storage</span>
+          <span>0 kg / 0 kg</span>
+        </div>
+        <div class="w-full h-2 bg-white rounded-full mt-1"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+        <div class="text-center md:text-left">
+          <h2 class="text-xl font-bold">Zero Emission Digital</h2>
+          <p class="text-green-200 text-sm">Understanding digital impact on Earth</p>
+        </div>
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a href="#" class="hover:text-green-300">
+            <svg class="w-6 h-6 text-white hover:text-white transition" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.43.36a9.05 9.05 0 01-2.88 1.1A4.48 4.48 0 0016.11 0c-2.49 0-4.5 2.07-4.5 4.63 0 .36.04.71.12 1.05A12.94 12.94 0 013 1.64a4.54 4.54 0 001.4 6.13A4.4 4.4 0 012 7v.06a4.49 4.49 0 003.6 4.4 4.52 4.52 0 01-2.04.08 4.51 4.51 0 004.2 3.18A9 9 0 012 19.54a12.94 12.94 0 007.29 2.13c8.76 0 13.54-7.5 13.54-14v-.64A9.8 9.8 0 0023 3z" />
+            </svg>          
+          </a>
+          <a href="#" class="hover:text-green-300">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.88a1.12 1.12 0 110 2.24 1.12 1.12 0 010-2.24z"/>
+            </svg>
+            
+          </a>
+          <a href="#" class="hover:text-green-300">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.337v21.326C0 23.4.6 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.796.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116c.725 0 1.325-.6 1.325-1.337V1.337C24 .6 23.4 0 22.675 0z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <hr class="border-white mb-4"/>
+      <p class="text-center text-sm text-green-200">&copy; 2025 Zero Emission Digital. All rights reserved.</p>
+    </div>
+  </footer>
+
+<!-- Script Toggle -->
+<script>
+  const toggleBtn = document.getElementById('mobile-search-toggle');
+  const mobileSearchBar = document.getElementById('mobile-search-bar');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileSearchBar.classList.toggle('hidden');
+  });
+</script>
+
+</body>
+</html>

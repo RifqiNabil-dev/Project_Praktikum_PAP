@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articles - ZED</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ecfdf5;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+<!-- Navbar -->
+<nav class="bg-green-700 text-white p-4 flex justify-between items-center border-b border-green-800 shadow-md relative">
+  <div class="flex items-center space-x-8">
+    <span class="font-bold italic text-white text-xl">ZED</span>
+    <a href="home.html" class="hover:underline">Home</a>
+    <a href="article.html" class="hover:underline font-semibold underline">Articles</a>
+    <a href="edupage.html" class="hover:underline">Edu Center</a>
+  </div>
+
+  <!-- Desktop Search Bar -->
+  <div class="relative hidden md:block">
+    <input type="text" placeholder="What do you want to know?" class="rounded-full pl-4 pr-10 py-1 text-black w-80" />
+    <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+      <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.414-1.414l4.387 4.386a1 1 0 01-1.414 1.415l-4.387-4.387zM14 8a6 6 0 11-12 0 6 6 0 0112 0z" clip-rule="evenodd" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Mobile Search Button -->
+  <div class="md:hidden">
+    <button id="mobile-search-toggle">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Search Input Hidden -->
+<div id="mobile-search-bar" class="p-4 bg-green-600 md:hidden hidden">
+  <div class="relative">
+    <input type="text" placeholder="What do you want to know?" class="w-full rounded-full pl-4 pr-10 py-2 text-black" />
+    <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+      <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.414-1.414l4.387 4.386a1 1 0 01-1.414 1.415l-4.387-4.387zM14 8a6 6 0 11-12 0 6 6 0 0112 0z" clip-rule="evenodd" />
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<section class="text-left px-8 py-12">
+  <h1 class="text-4xl font-bold text-green-700">Discover</h1>
+  <p class="text-lg text-gray-700">Education and Article Digital Carbon Footprint</p>
+</section>
+
+<!-- Featured Article -->
+<section class="px-8 mb-12">
+  <div class="bg-white rounded-xl shadow-md flex flex-col md:flex-row overflow-hidden">
+    <div class="p-14 flex flex-col justify-between w-full md:w-1/2">
+      <div>
+        <p class="text-sm text-green-600">25 May 2025</p>
+        <h2 class="text-2xl font-bold text-green-700 mt-6">A Critical Look at Our Planet's Changing Climate</h2>
+        <p class="text-gray-700 text-sm mt-4">Carbon emissions, primarily from burning fossil fuels, deforestation, and industrial processes, are rapidly increasing atmospheric carbon dioxide (CO2), driving global warming and climate change.</p>
+      </div>
+      <button class="bg-green-700 text-white px-4 py-2 rounded-md w-fit hover:bg-green-800 mt-4">View Details</button>
+    </div>
+    <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,f_auto,q_auto:best,w_640/v1634025439/01jmy92rskkmbjyzf3ercwfkfr.jpg" alt="Climate Article" class="w-full md:w-1/2 h-auto object-cover"/>
+  </div>
+</section>
+
+<!-- Other Articles -->
+<section class="px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <!-- Article Card -->
+  <div class="bg-white rounded-xl shadow-md overflow-hidden">
+    <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,f_auto,q_auto:best,w_640/v1634025439/01hnzjhqd25vnkm2zqqycxqft3.jpg" class="w-full h-64 object-cover" alt="Article"/>
+    <div class="p-8">
+      <h3 class="text-green-700 font-bold mb-2">A Critical Look at Our Planet's Changing Climate</h3>
+      <p class="text-sm text-gray-700 mb-4">Carbon emissions, primarily from burning fossil fuels, deforestation, and industrial processes, are rapidly increasing atmospheric carbon dioxide (CO2), driving global warming and climate change.</p>
+      <div class="flex justify-between items-center">
+        <button class="bg-green-700 text-white px-4 py-2 rounded-md text-sm hover:bg-green-800">View Details</button>
+        <span class="text-sm text-green-600">25 May 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Duplicate Card -->
+  <div class="bg-white rounded-xl shadow-md overflow-hidden">
+    <img src="https://photos.cdn.aurahealth.io/thumb_400x225_1733992321700sergei-a-helwtuan3c-unsplash.jpg" class="w-full h-64 object-cover" alt="Article"/>
+    <div class="p-8">
+      <h3 class="text-green-700 font-bold mb-2">A Critical Look at Our Planet's Changing Climate</h3>
+      <p class="text-sm text-gray-700 mb-4">Carbon emissions, primarily from burning fossil fuels, deforestation, and industrial processes, are rapidly increasing atmospheric carbon dioxide (CO2), driving global warming and climate change.</p>
+      <div class="flex justify-between items-center">
+        <button class="bg-green-700 text-white px-4 py-2 rounded-md text-sm hover:bg-green-800">View Details</button>
+        <span class="text-sm text-green-600">25 May 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Duplicate Card -->
+  <div class="bg-white rounded-xl shadow-md overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1653540798271-bfcd6ebd3d1c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==" class="w-full h-64 object-cover" alt="Article"/>
+    <div class="p-8">
+      <h3 class="text-green-700 font-bold mb-2">A Critical Look at Our Planet's Changing Climate</h3>
+      <p class="text-sm text-gray-700 mb-4">Carbon emissions, primarily from burning fossil fuels, deforestation, and industrial processes, are rapidly increasing atmospheric carbon dioxide (CO2), driving global warming and climate change.</p>
+      <div class="flex justify-between items-center">
+        <button class="bg-green-700 text-white px-4 py-2 rounded-md text-sm hover:bg-green-800">View Details</button>
+        <span class="text-sm text-green-600">25 May 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-green-700 text-white py-8 mt-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+      <div class="text-center md:text-left">
+        <h2 class="text-xl font-bold">Zero Emisi Digital</h2>
+        <p class="text-green-200 text-sm">Understanding our digital impact on the planet</p>
+      </div>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#" class="hover:text-green-300">
+          <svg class="w-6 h-6 text-white hover:text-white transition" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.43.36a9.05 9.05 0 01-2.88 1.1A4.48 4.48 0 0016.11 0c-2.49 0-4.5 2.07-4.5 4.63 0 .36.04.71.12 1.05A12.94 12.94 0 013 1.64a4.54 4.54 0 001.4 6.13A4.4 4.4 0 012 7v.06a4.49 4.49 0 003.6 4.4 4.52 4.52 0 01-2.04.08 4.51 4.51 0 004.2 3.18A9 9 0 012 19.54a12.94 12.94 0 007.29 2.13c8.76 0 13.54-7.5 13.54-14v-.64A9.8 9.8 0 0023 3z" />
+          </svg>          
+        </a>
+        <a href="#" class="hover:text-green-300">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.88a1.12 1.12 0 110 2.24 1.12 1.12 0 010-2.24z"/>
+          </svg>
+          
+        </a>
+        <a href="#" class="hover:text-green-300">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.337v21.326C0 23.4.6 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.796.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116c.725 0 1.325-.6 1.325-1.337V1.337C24 .6 23.4 0 22.675 0z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <hr class="border-white mb-4"/>
+    <p class="text-center text-sm text-green-200">&copy; 2023 Digital Carbon Footprint. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Script Toggle -->
+<script>
+  const toggleBtn = document.getElementById('mobile-search-toggle');
+  const mobileSearchBar = document.getElementById('mobile-search-bar');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileSearchBar.classList.toggle('hidden');
+  });
+</script>
+
+</body>
+</html>
